@@ -10,6 +10,7 @@ import StanfordDependencies
 import csv
 import re
 from lxml import etree as ET
+import os, sys
 
 
 """
@@ -82,7 +83,8 @@ Semantic role labelling
 """
 
 def getSRL():
-    srlInputFile = '/Users/evania/Documents/Human Media Interaction/Final Project/Final Project/Program/senna/output.txt'
+    workPath = os.getcwd()
+    srlInputFile = workPath+'/senna/output.txt'
     with open(srlInputFile) as f:
         slines = f.readlines()
     sentenceListSRL = []
@@ -697,7 +699,8 @@ Create the Semantic Representation
 
 sentenceList = [] # a list for the SemanticRepresentation objects
 
-dependencyInputFile = '/Users/evania/Documents/Human Media Interaction/Final Project/Final Project/Program/senna/input.txt'
+workPath = os.getcwd()
+dependencyInputFile = workPath+'/senna/input.txt'
 with open(dependencyInputFile) as f:
     dlines = f.readlines()
 #Load model to parse PENN TreeBank
@@ -718,7 +721,7 @@ for l in dlines:
         theID = 0
         semList = []
         for token in theDependencyResult:
-            print token
+            #print token
             stringToken = str(token)
             sem = SemanticRepresentation()
             sem.wordid = theID
