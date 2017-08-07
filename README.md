@@ -1,5 +1,9 @@
 # alice-qg
-Alice Question Generation System (AQG) is an automatic question generation system that is created for a virtual human's domain knowledge. The virtual human is from ARIA-VALUSPA project and it is called Alice. The initial AQG system was trained and tested by using Alice in Wonderland summaries. AQG uses Semantic Role Labeling (SRL) and Stanford Dependency to retrieve the semantic structure of the input text.
+AQG is an automatic question generation system that is created for a virtual human's domain knowledge. The virtual human is from ARIA-VALUSPA project and it is called Alice. The initial AQG system was trained and tested by using Alice in Wonderland summaries. AQG uses Semantic Role Labeling (SRL) and Stanford Dependency to retrieve the semantic structure of the input text.
+
+The main program is `aqg.py`. Run the main program by following the **instruction** on the next section. This main program generated QA pairs and store them in an XML file. To do an error analysis on the generated QA, run the `categorized_csv.py`. This helps the analysis by categorizing and converting the generated QAs on neat CSV files.
+
+`write_to_qamatcher.py` and `historysearch.py` are the additional scripts to test the generated QA using a virtual-human domain-knowledge tool called QAMatcher (http://hmi.ewi.utwente.nl/).
 
 ## Instruction
 
