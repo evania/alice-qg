@@ -5,6 +5,8 @@ The main program is `aqg.py`. Run the main program by following the **instructio
 
 `write_to_qamatcher.py` and `historysearch.py` are additional scripts to test the generated QA using a virtual-human domain-knowledge tool called QAMatcher (http://hmi.ewi.utwente.nl/).
 
+
+
 ## Instruction
 
 1. Download and Install SENNA and PyStanfordDependency
@@ -22,3 +24,16 @@ On the first run, go to part "Running the Program - Create the Semantic Represen
 4. Run the AQG
 Run the AQG by using this command:
 `python aqg.py`
+
+
+**Notes:**
+- The bllip-parser can only compile on UNIX based systems (see issue on Git: https://github.com/BLLIP/bllip-parser/issues/48), so no compatibility with Windows out-of-the-box yet.
+- The link to download SENNA is now offline, an alternative host that seems to be working now is: https://ronan.collobert.com/senna/
+  - Also add that this needs to be added to the folder where you put the alice-qg-matcher, and you need to manually add the input.txt and output.txt files. (otherwise file not found exceptions if running the python script)
+- It’s designed for Python 2 (so it might not work with Python 3)
+- There are some packages you need to install (if not installed already) with pip before it works:
+  - blliparser
+  - lxml
+  - default-jre (or any other Java environment)
+- There needs to be a folder in the alice-qg-matcher, named qamatcher/resources/qamatcher (otherwise the generation of QA-pairs fails)
+- You need to manually change in the main code of aqg the line of: ‘rrp = RerankingParser.from_unified_model_dir('LOCATION OF WSJ-PTB3')’ after running RerankingParser.fetch_and_load for the first time.
