@@ -5,7 +5,7 @@ The main program is `aqg.py`. Run the main program by following the **instructio
 
 `write_to_qamatcher.py` and `historysearch.py` are additional scripts to test the generated QA using a virtual-human domain-knowledge tool called QAMatcher (http://hmi.ewi.utwente.nl/).
 
-
+This system is created as part of a master thesis assignment -> http://essay.utwente.nl/73352/
 
 ## Instruction
 
