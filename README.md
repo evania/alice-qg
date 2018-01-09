@@ -26,7 +26,7 @@ Run the AQG by using this command:
 `python aqg.py`
 
 
-**Notes:**
+**Notes:** (thanks to Jelte https://github.com/Barachia)
 - The bllip-parser can only compile on UNIX based systems (see issue on Git: https://github.com/BLLIP/bllip-parser/issues/48), so no compatibility with Windows out-of-the-box yet.
 - The link to download SENNA is now offline, an alternative host that seems to be working now is: https://ronan.collobert.com/senna/
   - Also add that this needs to be added to the folder where you put the alice-qg-matcher, and you need to manually add the input.txt and output.txt files. (otherwise file not found exceptions if running the python script)
